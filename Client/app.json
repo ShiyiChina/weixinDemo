@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/teacher/studentsList/studentsList",
+    "pages/home/home",
+    
+
+    "pages/teacher/lesson/lesson",
+    "pages/teacher/kaoqin/kaoqin",
+    "pages/teacher/historyrecord/historyrecord",
+    "pages/teacher/kaoqinList/kaoqinList",
+    "pages/teacher/queqinList/queqinList",
+
+    "pages/student/student_lesson/student_lesson",
+    "pages/student/sign/sign",
+    "pages/student/s_historyrecord/s_historyrecord",
+
+    "pages/home/feedback/feedback",
+    "pages/home/about/about",
+    "pages/home/statement/statement",
+    "pages/home/person/person"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#393a3e",
+    "navigationBarTextStyle": "#fff"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_API.png",
+        "selectedIconPath": "images/icon_API_HL.png",
+        "text": "考勤"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icon_cloud.png",
+        "selectedIconPath": "images/icon_cloud_HL.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

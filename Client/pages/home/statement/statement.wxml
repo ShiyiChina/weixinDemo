@@ -1,0 +1,22 @@
+<view class="weui-article">
+    <view class="weui-article__section">
+        <view class="weui-article__h3">老师</view>
+        <view class="weui-article__p">请先至个人中心登录</view>
+        <view class="weui-article__p">课程结束后可以长按删除课程</view>
+        <view class="weui-article__p">删除课程后不可恢复，请谨慎操作</view>
+    </view>
+    <view class="weui-article__section">
+        <view class="weui-article__h3">学生</view>
+        <view class="weui-article__p">1. 请先至个人中心登录</view>
+        <view class="weui-article__p">2. 完善个人信息后，请前往个人中心校对</view>
+        <view class="weui-article__p">3. 多次修改学号进行签到可能会覆盖之前的签到信息，不要代签哦</view>
+        <!-- <text class="weui-article__p" selectable="true">https://github.com/xu42/OurDPU</text> -->
+    </view>
+    
+    <view class="weui-article__section">
+        <view class="weui-article__h3">感谢</view>
+        <view class="weui-article__p">张天伍老师的指导</view>
+        <view class="weui-article__p">功能有些许不完善，有问题或建议欢迎反馈</view>
+        <view class="weui-article__p">首次开发，请多指教</view>
+    </view>
+</view>

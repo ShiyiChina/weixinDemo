@@ -1,0 +1,10 @@
+<view>
+    <text>一切皆有可能 Just Do Ii</text>
+    <text selectable="true">一切皆有可能 Just Do IT</text>
+    <view class="weui-footer weui-footer_fixed-bottom">
+        <view class="weui-footer__links">
+            <view class="weui-footer__link">小测试</view>
+        </view>
+        <view class="weui-footer__text">Copyright Li. 2019. {{version}}. For My Graduation Project</view>
+    </view>
+</view>

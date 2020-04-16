@@ -1,0 +1,71 @@
+/* pages/queqinList/queqinList.wxss */
+.list_num {
+  display: flex;
+  justify-content: center;
+  color: green;
+}
+
+.list_top {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18pt;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 5pt;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.tr{
+  font-size: 12pt;
+  width: 43%;
+  justify-content: flex-start;
+  display: flex;
+}
+.td{
+  font-size: 12pt;
+  width: 27%;
+  justify-content: flex-start;
+  display: flex;
+}
+.list_top.th{
+  font-size: 30pt;
+  width: 25%;
+  justify-content: space-between;
+  display: flex;
+}
+.button{
+  height: 25px;
+  font-size: 14px;
+  color: green;
+  padding-left: 2px;
+  padding-right: 2px;
+  line-height: 25px;
+}
+.weui-article__section{
+    width: 90%;
+
+    /* margin: 0 auto; */
+    margin-top: 60rpx;
+    margin-bottom: 0px;
+
+}
+.weui-article__h3 {
+    border-bottom: 1px solid #aaa;
+}
+.weui-article__p {
+    margin: 0;
+}
+.quote {
+    background-color: #ebebeb;
+    border-left: 3px solid #1aad19;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+.del {
+    text-decoration: line-through;
+}

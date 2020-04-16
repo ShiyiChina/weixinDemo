@@ -1,0 +1,7 @@
+<!--pages/student/s_historyrecord/s_historyrecord.wxml-->
+<view class='record' wx:for="{{record}}" bindtap='chooserecord' data-keyid='{{item.keyid}}' data-lessonid='{{item.lessonid}}'>
+  <view class='times'>第{{index+1}}次考勤</view>
+  <view class='time' wx:if="{{item.state==0}}">缺勤</view>
+  <view class='time' wx:elif="{{item.state==1}}">已签到</view>
+  <view class='time' wx:elif="{{item.state==2}}">请假</view>
+</view>

@@ -1,0 +1,28 @@
+<!--pages/queqinList/queqinList.wxml-->
+<view class='list_num'>缺勤人数:{{length1}}</view>
+<view class='list_top'>
+  <text class='tr'>学号</text>
+  <text class='td'>姓名</text>
+  <text class='th'>状态修改</text>
+</view>
+<template name="msgItem">
+  <view class='list'>
+    <text class='tr'>{{xuehao}}</text>
+    <text class='td'>{{name}}</text>
+    <button class='button' bindtap="change_1" data-openid='{{openid}}'data-keyid='{{keyid}}' data-name='{{name}}'>已请假</button>
+    <button class='button' bindtap="change_2" data-openid='{{openid}}'data-keyid='{{keyid}}' data-name='{{name}}'>已签到</button>
+  </view>
+</template>
+<view class='content_item' wx:for="{{queqinList}}">
+  <template is="msgItem" data="{{...item}}" />
+</view>
+<view class="weui-article">
+  <view class="weui-article__section">
+    <view class="weui-article__h3">老师</view>
+    <view class="weui-article__p">1.此页面显示的所有学生都是没有签到的学生</view>
+    <view class="weui-article__p">2.最右边是按钮，用来进行状态修改的，不是当前状态</view>
+    <view class="weui-article__p">3.并不是此学生已签到已请假</view>  
+    <view class="weui-article__p">4.学生实际有没有签到有没有请假请自己核实</view>
+    <view class="weui-article__p">5.核实后点击按钮修改学生状态，</view>
+  </view>
+</view>

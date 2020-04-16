@@ -1,0 +1,20 @@
+<!--pages/signList/signList.wxml-->
+<button class="stopSign" type='primary' bindtap='stopSign' hidden='{{hiddenSign}}'>停止考勤</button>
+<view class='list_num'>
+    <view >已签到人数:{{length1}}</view>
+</view>
+<view>
+    <view class='list_top'>
+      <text class='th'>学号</text>
+      <text class='th'>姓名</text>
+    </view>
+    <template name="msgItem">
+      <view class='list'>
+        <text class='td'>{{xuehao}}</text>
+        <text class='td'>{{name}}</text>
+      </view>
+    </template>
+    <view class='content_item' wx:for="{{signList}}">
+      <template is="msgItem" data="{{...item}}" />
+    </view>
+</view>
