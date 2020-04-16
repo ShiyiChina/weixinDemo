@@ -53,7 +53,7 @@ public class LessonServiceImpl implements LessonService {
 
     @Override
     public List<Lesson> loadLesson() {
-        List<Lesson> lessons = lessonMapper.selectAll();
+        List<Lesson> lessons = lessonMapper.loadLesson();
         return lessons;
     }
 

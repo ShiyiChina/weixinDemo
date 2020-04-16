@@ -2,6 +2,8 @@ package com.shiyi.pojo;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
@@ -10,11 +12,11 @@ import java.util.Date;
 public class Lesson {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int lessonid;//` int(5) NOT NULL,
     private String openid;//` varchar(50) NOT NULL,
     private String slesson;//` varchar(20) NOT NULL,
     private String sclass;//` varchar(20) NOT NULL,
-    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date setTime;//` datetime NOT NULL
 
     public int getLessonid() {

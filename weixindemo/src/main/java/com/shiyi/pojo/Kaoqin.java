@@ -1,5 +1,8 @@
 package com.shiyi.pojo;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
@@ -7,6 +10,8 @@ import java.util.Date;
 @Table(name = "kaoqin")
 public class Kaoqin {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int keyid;//` int(6) NOT NULL,
     private int lessonid;//` int(6) NOT NULL,
     private String openid;//` varchar(50) NOT NULL,
