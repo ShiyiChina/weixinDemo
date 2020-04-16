@@ -26,7 +26,7 @@ Page({
       url: 'http://localhost:8080/xdq/lesson/loadAllLesson',
       data: {},
       success: function (res) {
-        //console.log(res.data);
+        console.log(res.data);
         
         for(var i=0; i<res.data.length;i++){
           // console.log(res.data[i].setTime);

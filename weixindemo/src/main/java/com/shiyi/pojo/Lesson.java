@@ -2,10 +2,7 @@ package com.shiyi.pojo;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Table(name = "lesson")
@@ -17,7 +14,8 @@ public class Lesson {
     private String openid;//` varchar(50) NOT NULL,
     private String slesson;//` varchar(20) NOT NULL,
     private String sclass;//` varchar(20) NOT NULL,
-    private Date setTime;//` datetime NOT NULL
+    @Column(name = "createtime")
+    private Date createTime;//` datetime NOT NULL
 
     public int getLessonid() {
         return lessonid;
@@ -52,11 +50,11 @@ public class Lesson {
     }
 
     public Date getSetTime() {
-        return setTime;
+        return createTime;
     }
 
     public void setSetTime(Date setTime) {
-        this.setTime = setTime;
+        this.createTime = setTime;
     }
 
     @Override
@@ -66,7 +64,7 @@ public class Lesson {
                 ", openid='" + openid + '\'' +
                 ", slesson='" + slesson + '\'' +
                 ", sclass='" + sclass + '\'' +
-                ", setTime='" + setTime + '\'' +
+                ", setTime='" + createTime + '\'' +
                 '}';
     }
 }
