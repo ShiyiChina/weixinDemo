@@ -8,9 +8,10 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
+    hiddenteacher: true,
+    hiddenstudent: true,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-
   onLoad: function () {
     var that = this;
     if (app.globalData.userInfo) {
@@ -66,11 +67,32 @@ Page({
     });
   },
   getUserInfo: function (e) {
+    var that = this;
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      hasUserInfo: true,
+    }),
+    wx.request({
+      url: 'http://localhost:8080/user/queryRoleByOpenid',
+      data: {
+        openid: wx.getStorageSync('openid')
+      },
+      method: "POST",
+      header: { 'Content-Type': 'application/json' },
+      success:function(res){
+        console.log(res.data)
+        if(res.data == "student"){
+          that.setData({
+            hiddenstudent: false
+          })
+        }else{
+          that.setData({
+            hiddenteacher: false,
+          }) 
+        }
+      }
     })
   }
 

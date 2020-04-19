@@ -29,6 +29,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public String queryRoleByOpenid(String openid) {
+        UserInfo user = userMapper.selectByPrimaryKey(openid);
+        return user.getRole();
+    }
+
+    @Override
     public Student findStudentById(String id) {
         Student student = userMapper.findStudentById(id);
         return student;

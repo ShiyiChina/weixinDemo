@@ -20,11 +20,23 @@ public class UserController {
     private UserService userService;
 
     /**
+     * 根据openid查询role（老师/学生）
+     * @param openidMap
+     * @return
+     */
+    @PostMapping("/queryRoleByOpenid")
+    @ResponseBody
+    public String queryRoleByOpenid(@RequestBody Map openidMap){
+        String openid = (String) openidMap.get("openid");
+        return userService.queryRoleByOpenid(openid);
+    }
+
+    /**
      * 根据openid查询个人信息
      * @param openidMap
      * @return
      */
-    @PostMapping("/findUserByOpenid")
+    @PostMapping("/queryStudentByOpenid")
     @ResponseBody
     public Student queryStudentByOpenid(@RequestBody Map openidMap){
         String openid = (String) openidMap.get("openid");

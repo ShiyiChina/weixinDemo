@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/index/index",
     "pages/teacher/studentsList/studentsList",
-    "pages/home/home",
     "pages/teacher/lesson/lesson",
     "pages/teacher/kaoqin/kaoqin",
     "pages/teacher/historyrecord/historyrecord",
@@ -14,7 +14,8 @@
     "pages/home/feedback/feedback",
     "pages/home/about/about",
     "pages/home/statement/statement",
-    "pages/home/person/person"
+    "pages/home/student/student",
+    "pages/home/teacher/teacher"
   ],
   "window": {
     "backgroundTextStyle": "black",
