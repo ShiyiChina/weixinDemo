@@ -10,6 +10,8 @@ public interface UserService {
 
     String queryRoleByOpenid(String openid);
 
+    Teacher queryTeacherByOpenid(String openid);
+
     public Student findStudentById(String id);
     public Map sign(SignVo signVo);
     public void insertStudent(Student student);

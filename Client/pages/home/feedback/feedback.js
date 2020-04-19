@@ -20,10 +20,12 @@ Page({
       this.setData({
           btn_loading: true
       });
+      var openid = wx.getStorageSync('openid');
       wx.request({
-          url: app.SERVER_URL + '/api/mina/feedback',
+          url: 'http://localhost:8080/saveAdvance',
           data: {
-              content: e.detail.value.content
+            openid: openid,
+            advance: e.detail.value.content
           },
           method: 'POST',
           success: (res) => {

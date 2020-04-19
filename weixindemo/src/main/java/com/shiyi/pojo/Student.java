@@ -16,6 +16,15 @@ public class Student {
     private String School;
     private String College;
     private String Major;
+    private Integer updateNum;
+
+    public Integer getUpdateNum() {
+        return updateNum;
+    }
+
+    public void setUpdateNum(Integer updateNum) {
+        this.updateNum = updateNum;
+    }
 
     public String getSchool() {
         return School;

@@ -35,6 +35,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Teacher queryTeacherByOpenid(String openid) {
+        return teacherMapper.selectByPrimaryKey(openid);
+    }
+
+    @Override
     public Student findStudentById(String id) {
         Student student = userMapper.findStudentById(id);
         return student;

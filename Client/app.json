@@ -15,7 +15,9 @@
     "pages/home/about/about",
     "pages/home/statement/statement",
     "pages/home/student/student",
-    "pages/home/teacher/teacher"
+    "pages/home/teacher/teacher",
+    "pages/home/changeStudent/changeStudent",
+    "pages/home/changeTeacher/changeTeacher"
   ],
   "window": {
     "backgroundTextStyle": "black",

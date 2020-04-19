@@ -44,6 +44,18 @@ public class UserController {
         return student;
     }
 
+    /**
+     * 根据openid查询个人信息
+     * @param openidMap
+     * @return
+     */
+    @PostMapping("/queryTeacherByOpenid")
+    @ResponseBody
+    public Teacher queryTeacherByOpenid(@RequestBody Map openidMap){
+        String openid = (String) openidMap.get("openid");
+        return userService.queryTeacherByOpenid(openid);
+    }
+
 
     @RequestMapping(value = "/sign")
     @ResponseBody
