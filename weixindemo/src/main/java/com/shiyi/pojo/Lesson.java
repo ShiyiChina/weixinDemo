@@ -1,7 +1,5 @@
 package com.shiyi.pojo;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
 import java.util.Date;
 
@@ -10,19 +8,19 @@ public class Lesson {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int lessonid;//` int(5) NOT NULL,
-    private String openid;//` varchar(50) NOT NULL,
-    private String slesson;//` varchar(20) NOT NULL,
-    private String sclass;//` varchar(20) NOT NULL,
-    @Column(name = "createtime")
-    private Date createTime;//` datetime NOT NULL
+    private int lessonId;
+    private String openid;
+    private String lessonName;
+    private String className;
+    private Date createTime;
 
-    public int getLessonid() {
-        return lessonid;
+
+    public int getLessonId() {
+        return lessonId;
     }
 
-    public void setLessonid(int lessonid) {
-        this.lessonid = lessonid;
+    public void setLessonId(int lessonId) {
+        this.lessonId = lessonId;
     }
 
     public String getOpenid() {
@@ -33,38 +31,38 @@ public class Lesson {
         this.openid = openid;
     }
 
-    public String getSlesson() {
-        return slesson;
+    public String getLessonName() {
+        return lessonName;
     }
 
-    public void setSlesson(String slesson) {
-        this.slesson = slesson;
+    public void setLessonName(String lessonName) {
+        this.lessonName = lessonName;
     }
 
-    public String getSclass() {
-        return sclass;
+    public String getClassName() {
+        return className;
     }
 
-    public void setSclass(String sclass) {
-        this.sclass = sclass;
+    public void setClassName(String className) {
+        this.className = className;
     }
 
-    public Date getSetTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setSetTime(Date setTime) {
-        this.createTime = setTime;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     @Override
     public String toString() {
         return "Lesson{" +
-                "lessonId=" + lessonid +
+                "lessonId=" + lessonId +
                 ", openid='" + openid + '\'' +
-                ", slesson='" + slesson + '\'' +
-                ", sclass='" + sclass + '\'' +
-                ", setTime='" + createTime + '\'' +
+                ", lessonName='" + lessonName + '\'' +
+                ", className='" + className + '\'' +
+                ", createTime=" + createTime +
                 '}';
     }
 }

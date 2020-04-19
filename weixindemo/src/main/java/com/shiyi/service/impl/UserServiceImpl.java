@@ -1,6 +1,8 @@
 package com.shiyi.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
+import com.shiyi.mapper.StudentMapper;
+import com.shiyi.mapper.TeacherMapper;
 import com.shiyi.mapper.UserMapper;
 import com.shiyi.pojo.*;
 import com.shiyi.service.UserService;
@@ -15,6 +17,16 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private StudentMapper studentMapper;
+    @Autowired
+    private TeacherMapper teacherMapper;
+
+    @Override
+    public Student queryStudentByOpenid(String openid) {
+        Student student = studentMapper.selectByPrimaryKey(openid);
+        return student;
+    }
 
     @Override
     public Student findStudentById(String id) {
@@ -35,7 +47,7 @@ public class UserServiceImpl implements UserService {
 
             Student studentById = findStudentById(userid);
             if(studentById==null){
-                Student student = new Student(userid,sname,snum);
+                Student student = new Student();
                 insertStudent(student);
                 res.put("data","Student");
 
@@ -45,9 +57,9 @@ public class UserServiceImpl implements UserService {
         }else if (slesson!=null && sclass!=null){
             Lesson lesson = new Lesson();
             lesson.setOpenid(userid);
-            lesson.setSlesson(slesson);
-            lesson.setSclass(sclass);
-            lesson.setSetTime(new Date());
+            lesson.setLessonName(slesson);
+            lesson.setClassName(sclass);
+            lesson.setCreateTime(new Date());
             insertLesson(lesson);
             res.put("data","lesson");
         }
@@ -185,8 +197,8 @@ public class UserServiceImpl implements UserService {
         Student student = userMapper.findStudentById(openid);
         LessonKey lessonKey = userMapper.findLessonKey(lessonid);
         if (lessonKey!=null){
-            SignList signList = new SignList(lessonKey.getKeyid(),lessonid,openid,student.getName(),student.getXuehao(),new Date());
-            userMapper.insertSignList(signList);//没有解决重复签到
+            //SignList signList = new SignList(lessonKey.getKeyid(),lessonid,openid,student.getsName(),student.getsNum(),new Date());
+            //userMapper.insertSignList(signList);//没有解决重复签到
         }
 
 

@@ -1,37 +1,31 @@
 package com.shiyi.pojo;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
+@Table(name = "kaoqin_score")
+public class KaoqinScore {
 
-@Table(name = "kaoqin")
-public class Kaoqin {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int keyid;//` int(6) NOT NULL,
-    private int lessonid;//` int(6) NOT NULL,
+    private int keyId;//` int(6) NOT NULL,
+    private int lessonId;//` int(6) NOT NULL,
     private String openid;//` varchar(50) NOT NULL,
     private int state;//` int(11) NOT NULL,
     private Date time;//` datetime NOT NULL
 
-    public int getKeyid() {
-        return keyid;
+    public int getKeyId() {
+        return keyId;
     }
 
-    public void setKeyid(int keyid) {
-        this.keyid = keyid;
+    public void setKeyId(int keyId) {
+        this.keyId = keyId;
     }
 
-    public int getLessonid() {
-        return lessonid;
+    public int getLessonId() {
+        return lessonId;
     }
 
-    public void setLessonid(int lessonid) {
-        this.lessonid = lessonid;
+    public void setLessonId(int lessonId) {
+        this.lessonId = lessonId;
     }
 
     public String getOpenid() {

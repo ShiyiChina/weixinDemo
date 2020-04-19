@@ -10,7 +10,7 @@ import java.util.List;
 public interface LessonMapper extends Mapper<Lesson> {
 
 
-    @Select("select * from lesson order by setTime desc")
+    @Select("select * from lesson order by create_time desc")
     List<Lesson> loadLesson();
 
 }

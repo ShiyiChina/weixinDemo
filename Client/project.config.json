@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.9",
+	"libVersion": "2.5.2",
 	"appid": "wx4f9282c983c1bc95",
 	"projectname": "%E8%80%83%E5%8B%A4java",
 	"isGameTourist": false,

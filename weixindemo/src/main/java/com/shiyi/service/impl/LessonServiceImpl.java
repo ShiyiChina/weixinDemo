@@ -3,7 +3,7 @@ package com.shiyi.service.impl;
 import com.shiyi.mapper.KaoqinMapper;
 import com.shiyi.mapper.LessonMapper;
 import com.shiyi.mapper.UserMapper;
-import com.shiyi.pojo.Kaoqin;
+import com.shiyi.pojo.KaoqinScore;
 import com.shiyi.pojo.Lesson;
 import com.shiyi.pojo.QueqinList;
 import com.shiyi.pojo.Student;
@@ -59,8 +59,8 @@ public class LessonServiceImpl implements LessonService {
 
     @Override
     public List<QueqinList> queqinList(int lessonid) {
-        Kaoqin kaoqin = new Kaoqin();
-        kaoqin.setLessonid(lessonid);
+        KaoqinScore kaoqin = new KaoqinScore();
+        kaoqin.setLessonId(lessonid);
         Lesson lesson = lessonMapper.selectByPrimaryKey(lessonid);
         if (lesson != null){
             List<QueqinList> queqinLists = new ArrayList<>();
@@ -68,8 +68,8 @@ public class LessonServiceImpl implements LessonService {
             String openid = lesson.getOpenid();
             Student student = userMapper.findStudentById(openid);
             if (student!=null){
-                QueqinList queqinList = new QueqinList(student.getOpenid(),student.getXuehao(),student.getName(),new Date());
-                queqinLists.add(queqinList);
+                //QueqinList queqinList = new QueqinList(student.getOpenid(),student.getXuehao(),student.getName(),new Date());
+                //queqinLists.add(queqinList);
 
             }
             return queqinLists;

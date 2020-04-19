@@ -1,12 +1,8 @@
 package com.shiyi.controller;
 
-import com.shiyi.pojo.LessonKey;
-import com.shiyi.pojo.SignList;
-import com.shiyi.pojo.SignVo;
-import com.shiyi.pojo.Student;
-import com.shiyi.pojo.Queqin;
-import com.shiyi.pojo.QueqinList;
+import com.shiyi.pojo.*;
 import com.shiyi.service.UserService;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +13,24 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/xdq/user")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
     private UserService userService;
+
+    /**
+     * 根据openid查询个人信息
+     * @param openidMap
+     * @return
+     */
+    @PostMapping("/findUserByOpenid")
+    @ResponseBody
+    public Student queryStudentByOpenid(@RequestBody Map openidMap){
+        String openid = (String) openidMap.get("openid");
+        Student student = userService.queryStudentByOpenid(openid);
+        return student;
+    }
 
 
     @RequestMapping(value = "/sign")

@@ -2,7 +2,6 @@
 let app = getApp();
 var userInfo = null;
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -108,11 +107,11 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    var userid = wx.getStorageSync('openid');
+    var openid = wx.getStorageSync('openid');
     wx.request({
-      url: 'http://localhost:8080/xdq/user/check_user',
+      url: 'http://localhost:8080/user/findUserByOpenid',
       data: {
-        openid: userid,
+        openid,
       },
       method: 'POST',
       header: { 'Content-Type': 'application/json' },

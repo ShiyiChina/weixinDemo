@@ -3,23 +3,18 @@
     "pages/index/index",
     "pages/teacher/studentsList/studentsList",
     "pages/home/home",
-    
-
     "pages/teacher/lesson/lesson",
     "pages/teacher/kaoqin/kaoqin",
     "pages/teacher/historyrecord/historyrecord",
     "pages/teacher/kaoqinList/kaoqinList",
     "pages/teacher/queqinList/queqinList",
-
     "pages/student/student_lesson/student_lesson",
     "pages/student/sign/sign",
     "pages/student/s_historyrecord/s_historyrecord",
-
     "pages/home/feedback/feedback",
     "pages/home/about/about",
     "pages/home/statement/statement",
     "pages/home/person/person"
-
   ],
   "window": {
     "backgroundTextStyle": "black",

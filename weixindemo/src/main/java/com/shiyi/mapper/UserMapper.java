@@ -5,10 +5,11 @@ import com.shiyi.pojo.*;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 
-public interface UserMapper {
+public interface UserMapper extends Mapper<UserInfo> {
 
     @Select("select * from student where openid=#{openid}")
     Student findStudentById(String openid);

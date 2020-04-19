@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Map;
 
 public interface UserService {
+
+    Student queryStudentByOpenid(String openid);
+
     public Student findStudentById(String id);
     public Map sign(SignVo signVo);
     public void insertStudent(Student student);
@@ -34,4 +37,6 @@ public interface UserService {
     LessonKey checkLessonKey(int lessonid);
 
     void savaSign(String openid, int lessonid);
+
+
 }
